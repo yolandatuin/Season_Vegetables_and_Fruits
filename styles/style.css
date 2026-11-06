@@ -50,10 +50,11 @@ aside h1 {
 aside ul {
   list-style: none;
   border-left-style: solid;
-  border-color: #fff;
   font-size: 1.2rem;
   color: black;
   gap: 1rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
