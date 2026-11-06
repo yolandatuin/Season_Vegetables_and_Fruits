@@ -3,9 +3,7 @@ let itemsList = document.querySelector(".js_ul");
 let emojies = document.querySelector(".js_emojies");
 
 let currentDate = new Date();
-let currentDay = currentDate.getDate();
 let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
 
 let months = [
   "January",
@@ -24,7 +22,7 @@ let months = [
 let monthArray;
 const currentMonthName = months[currentMonth];
 
-month.innerHTML = currentDay + " of " + currentMonthName + " of " + currentYear;
+month.innerHTML = currentMonthName;
 
 fetch("months.json")
   .then((response) => response.json())
@@ -43,7 +41,7 @@ function paintData() {
 
   document.body.style.color = monthStyle[0];
   document.querySelector(".h1_color").style.color = monthStyle[1];
-  emojies.innerHTML = `${monthStyle[1]}`;
+  emojies.innerHTML = `${monthStyle[2]}`;
 
   for (let item in monthVeggies) {
     //"in" because it's an Object, not an Array.
